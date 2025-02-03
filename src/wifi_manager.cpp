@@ -71,6 +71,8 @@ void saveWiFiConfig() {
 void setupWiFiManager() {
     Serial.println("Starte WiFi Manager...");
     loadConfig();
+
+    WiFi.hostname("Wechselrichter_Control");  
     
     if (savedSSID != "") {
         Serial.println("Versuche Verbindung zu SSID: " + savedSSID);
